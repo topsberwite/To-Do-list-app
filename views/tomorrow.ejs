@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="date">
+  <h1>Tomorrow</h1>
+</div>
+
+<form action="/tomorrow" method="post" id="form">
+  <input type="text" name="toDo" id="task" placeholder="What to do?" autocomplete="off">
+  <input type="submit" name="add" id="btn" value="Add">
+
+
+<% if (locals.tomorrowList) { %>
+    <% for (let i = 0; i < tomorrowList.length; i++) { %>
+      <div class="todos">
+        <input type="checkbox">
+        <p><%= tomorrowList[i] %></p>
+      </div>
+    <% } %>
+<% } else { %> 
+  <p>No tasks added yet.</p>
+<% } %>
+</form>
+
+  
+
+<%- include("partials/footer.ejs") %>

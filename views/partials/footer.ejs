@@ -1,0 +1,18 @@
+</main>
+
+<footer>
+  <p>Copyright &#169; <%= new Date().getFullYear() %></p>
+</footer>
+
+
+<script>
+  $(":checkbox").click(function() {
+    if(this.click) {
+      $(".todos > p").toggleClass("line-through");
+    }
+});
+</script>
+
+</body>
+
+</html>
